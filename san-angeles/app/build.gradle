@@ -3,16 +3,16 @@
 apply plugin: 'com.android.application'
 
 import com.android.build.OutputFile
-ext.versionCodes = ['armeabi-v7a':1, 'arm64-v8a':2, 'mips':3, 'x86':4]
+ext.versionCodes = ['armeabi-v7a':1, 'arm64-v8a':2, 'x86':3]
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 26
+    buildToolsVersion '25.0.3'
 
     defaultConfig {
         applicationId "com.example.SanAngeles"
         minSdkVersion 14
-        targetSdkVersion 14
+        targetSdkVersion 26
         versionCode  1
         versionName  "1.0"
     }
@@ -32,7 +32,7 @@ android {
         abi {
             enable true
             reset()
-            include 'armeabi-v7a', 'arm64-v8a','mips', 'x86'
+            include 'armeabi-v7a', 'arm64-v8a', 'x86'
             universalApk false
         }
     }
